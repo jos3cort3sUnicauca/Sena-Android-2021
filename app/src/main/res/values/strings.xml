@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">AppSenaTestOne</string>
+    <string name="btnLogin">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="framgmenthome">Fragmento de Home</string>
+    <string name="fragmentRegister">Fragmento de Registro</string>
+
+
+</resources>
