@@ -6,7 +6,7 @@
     app:startDestination="@id/loginFragment3">
     <fragment
         android:id="@+id/loginFragment3"
-        android:name="com.enterthings.appsenatestone.LoginFragment"
+        android:name="com.enterthings.appsenatestone.ui.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -18,12 +18,12 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment2"
-        android:name="com.enterthings.appsenatestone.RegisterFragment"
+        android:name="com.enterthings.appsenatestone.ui.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.enterthings.appsenatestone.HomeFragment"
+        android:name="com.enterthings.appsenatestone.ui.remember.RememberFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_remember" />
 </navigation>

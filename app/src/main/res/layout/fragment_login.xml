@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginFragment">
+    tools:context=".ui.login.LoginFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -17,10 +17,11 @@
             android:id="@+id/view"
             android:layout_width="match_parent"
             android:layout_height="250dp"
-            android:background="@color/purple_500"
+            android:background="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
 
         <androidx.cardview.widget.CardView
@@ -31,7 +32,8 @@
             app:cardCornerRadius="20dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            >
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -41,10 +43,11 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginVertical="20dp"
                     android:gravity="center_horizontal"
+                    android:paddingVertical="20dp"
                     android:text="LOGIN"
-                    android:textColor="@color/Black"
+                    android:background="@color/purple_500"
+                    android:textColor="@color/white"
                     android:textSize="20dp" />
 
 
@@ -93,6 +96,8 @@
             android:layout_height="60dp"
             android:layout_marginTop="460dp"
             android:text="Sing in"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/purple_500"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -105,6 +110,8 @@
             android:layout_height="60dp"
             android:layout_marginTop="520dp"
             android:text="Register"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/purple_500"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
