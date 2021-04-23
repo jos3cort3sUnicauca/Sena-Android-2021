@@ -1,43 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.login.LoginFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:background="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
-
-
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
-            android:layout_width="350dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200dp"
-            app:cardCornerRadius="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:elevation="50dp"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            >
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="290dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -45,11 +34,10 @@
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
                     android:paddingVertical="20dp"
-                    android:text="LOGIN"
-                    android:background="@color/purple_500"
-                    android:textColor="@color/white"
+                    android:text="INICIO DE SESIÓN"
+                    android:textColor="@color/purple_500"
+                    android:textStyle="bold"
                     android:textSize="20dp" />
-
 
                 <TextView
                     android:layout_width="match_parent"
@@ -65,16 +53,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:inputType="textEmailAddress"
                     android:drawableStart="@drawable/ic_baseline_mail_outline_24"
-                    android:drawablePadding="5dp" />
+                    android:drawablePadding="5dp"
+                    android:inputType="textEmailAddress" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingHorizontal="20dp"
                     android:paddingVertical="5dp"
-                    android:text="Password"
+                    android:text="Contraseña"
                     android:textColor="@color/purple_500"
                     android:textSize="20dp" />
 
@@ -82,41 +70,59 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
-                    android:layout_marginBottom="50dp"
+                    android:layout_marginBottom="10dp"
                     android:drawableStart="@drawable/ic_baseline_vpn_key_24"
                     android:drawablePadding="5dp"
                     android:inputType="textWebPassword" />
 
+
+                <Switch
+                    android:id="@+id/btn_remember_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Desea que se recurde su contraseña"
+                    android:textColor="@color/purple_500"
+                    android:layout_marginBottom="20dp"
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnHome"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/my_style_botones"
+                    android:text="Iniciar"
+                    android:textColor="@color/purple_500"
+                    android:layout_gravity="center"
+                    />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRegister"
+                    android:layout_width="200dp"
+                    android:layout_marginHorizontal="5pt"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/my_style_botones"
+                    android:layout_gravity="center"
+                    android:textColor="@color/purple_500"
+                    android:layout_marginBottom="20dp"
+                    android:text="Registro"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_forgotten_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:paddingHorizontal="5dp"
+                    android:text="Recupere su contraseña"
+                    android:textColor="@color/purple_500"
+                    android:layout_gravity="end"/>
+
             </androidx.appcompat.widget.LinearLayoutCompat>
         </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/btnHome"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="460dp"
-            android:text="Sing in"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/purple_500"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-
-        <Button
-            android:id="@+id/btnRegister"
-            android:layout_width="200dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="520dp"
-            android:text="Register"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/purple_500"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

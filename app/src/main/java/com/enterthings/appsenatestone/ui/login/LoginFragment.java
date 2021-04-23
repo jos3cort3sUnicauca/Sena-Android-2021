@@ -1,5 +1,6 @@
 package com.enterthings.appsenatestone.ui.login;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.enterthings.appsenatestone.DrawerActivity;
 import com.enterthings.appsenatestone.R;
 
 /**
@@ -65,10 +67,11 @@ public class LoginFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_login, container, false);
         Button btnRegister =view.findViewById(R.id.btnRegister);
-        Button btnhome =view.findViewById(R.id.btnHome);
+        Button btnOlvido =view.findViewById(R.id.btn_forgotten_login);
+        Button btnNavDrawer = view.findViewById(R.id.btnHome);
 
 
-        btnhome.setOnClickListener(new View.OnClickListener() {
+        btnOlvido.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(view).navigate(R.id.action_loginFragment3_to_homeFragment);
@@ -80,6 +83,14 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(view).navigate(R.id.action_loginFragment3_to_registerFragment2);
+            }
+        });
+
+        btnNavDrawer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent pasDrawer = new Intent(getContext(), DrawerActivity.class);
+                startActivity(pasDrawer);
             }
         });
 

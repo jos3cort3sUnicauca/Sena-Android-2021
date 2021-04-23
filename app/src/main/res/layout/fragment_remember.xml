@@ -3,17 +3,79 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.remember.RememberFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/tvFragmentoOlvido"
-        android:background="@color/Violet"
-        android:text="@string/framgmentOlvido"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:textColor="@color/White"/>
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:elevation="50dp"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="20dp"
+                    android:gravity="center"
+                    android:text="Recupere su contraseña"
+                    android:textSize="25dp"
+                    android:textColor="@color/purple_500"
+                    android:textStyle="bold|italic" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    android:paddingVertical="5dp"
+                    android:text="Email"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20dp" />
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:drawableStart="@drawable/ic_baseline_mail_outline_24"
+                    android:drawablePadding="5dp"
+                    android:inputType="textEmailAddress" />
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnRegisterRegister"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/my_style_botones"
+                    android:text="Enviar"
+                    android:layout_marginVertical="30dp"/>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
